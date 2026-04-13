@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.turbo/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+
+# Database
+*.db
+*.sqlite
+*.db-shm
+*.db-wal
+*.bak
+*.bak-*
+
+# Per-app runtime state
+apps/server/data/
+apps/connector/state/
+
+# tsc incremental
+*.tsbuildinfo

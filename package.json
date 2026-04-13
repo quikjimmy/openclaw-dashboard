@@ -1,0 +1,24 @@
+{
+  "name": "openclaw-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web dashboard for monitoring and managing OpenClaw",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev:web": "pnpm --filter @openclaw-dashboard/web dev",
+    "dev:server": "pnpm --filter @openclaw-dashboard/server dev",
+    "build:web": "pnpm --filter @openclaw-dashboard/web build",
+    "build:server": "pnpm --filter @openclaw-dashboard/server build"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
