@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenClaw Dashboard API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/openclaw-dashboard/apps/server
+EnvironmentFile=/opt/openclaw-dashboard/apps/server/.env
+ExecStart=/usr/bin/node dist/index.js
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
