@@ -1,12 +1,10 @@
 import * as ed from '@noble/ed25519';
 import { sha256 } from '@noble/hashes/sha256';
+import { sha512 } from '@noble/hashes/sha512';
 import { bytesToHex } from '@noble/hashes/utils';
 
 // Enable synchronous methods
-ed.etc.sha512Sync = (...m) => {
-  const { sha512 } = require('@noble/hashes/sha512');
-  return sha512(ed.etc.concatBytes(...m));
-};
+ed.etc.sha512Sync = (...m) => sha512(ed.etc.concatBytes(...m));
 
 export interface KeyPair {
   publicKey: Uint8Array;

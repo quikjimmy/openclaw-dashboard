@@ -1,3 +1,4 @@
+import { createHash } from 'crypto';
 import { StorageService } from './storage.js';
 import { generateDeviceIdentity, signChallenge, DeviceIdentity } from './crypto.js';
 
@@ -87,7 +88,6 @@ export class InstanceDeviceService {
   }
 
   private deriveDeviceId(publicKeyBase64: string): string {
-    const { createHash } = require('crypto') as typeof import('crypto');
     const publicKeyBytes = Buffer.from(publicKeyBase64, 'base64');
     return createHash('sha256').update(publicKeyBytes).digest('hex');
   }
